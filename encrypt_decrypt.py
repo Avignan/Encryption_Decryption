@@ -22,7 +22,6 @@ def key_generator():
 def secret_key_generator():
     skey = Fernet.generate_key()
     # key2 = write_key(key)
-    print(skey)
     return skey
 
 
@@ -71,7 +70,6 @@ def decryptor(ki):
 if __name__ == '__main__':
 
     pass_key = key_generator()
-    print(pass_key)
     with open('The_key.key', 'wb') as file:
         file.write(pass_key)
     for file in files:
